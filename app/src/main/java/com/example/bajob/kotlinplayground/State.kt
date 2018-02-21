@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import java.util.*
 
 /**
  * Created by bajob on 2/19/2018.
@@ -50,6 +49,7 @@ class IdScaningState(override val context: Context) : State() {
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
         c.startActivityForResult(intent, 567)
     }
+
     override fun goToCardState() {
 
     }
@@ -64,6 +64,7 @@ class IdScaningState(override val context: Context) : State() {
     }
 
 }
+
 class CardScanningState(override val context: Context) : State() {
 
     override fun goToIdState() {
@@ -77,6 +78,7 @@ class CardScanningState(override val context: Context) : State() {
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
         c.startActivityForResult(intent, 890)
     }
+
     override fun goToManualState() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -96,6 +98,7 @@ class EnterCredentialsState(override val context: Context) : State() {
     override fun goToCardState() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
     override fun goToManualState() {
         val c = context as StateClient
         print("Entering user credentials")
@@ -123,6 +126,7 @@ interface StateTransitions {
     fun goToCardState()
     fun goToManualState()
 }
+
 class StateClient : AppCompatActivity() {
     lateinit var currentState: State
 
@@ -132,6 +136,7 @@ class StateClient : AppCompatActivity() {
         currentState = InitialState(this)
         button.setOnClickListener { currentState.goToIdState() }
     }
+
     fun validateFormState(): Boolean {
         return true
     }
@@ -170,6 +175,7 @@ class CardScaningActivity : AppCompatActivity() {
         finish();
     }
 }
+
 class ManualActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()

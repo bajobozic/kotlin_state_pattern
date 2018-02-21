@@ -14,7 +14,7 @@ class SomeClass {
 
 }
 
-fun someMethode(newage:Int): SomeClass {
+fun someMethode(newage: Int): SomeClass {
     return SomeClass().apply { age = newage }
 
 }

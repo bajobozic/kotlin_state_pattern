@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="privacy_view_custom_attributes">
+        <attr name="privacy_view_custom_padding_left" format="dimension"/>
+        <attr name="privacy_view_custom_background" format="color"/>
+    </declare-styleable>
+</resources>

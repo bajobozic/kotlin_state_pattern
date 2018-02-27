@@ -6,16 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bajob.kotlinplayground.MainActivity">
+
     <WebView
         android:id="@+id/web_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.bajob.kotlinplayground.PrivacyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:privacy_view_custom_padding_left="@dimen/left_padding"
+        app:privacy_view_custom_background="@color/colorAccent"
+        >
+
+    </com.example.bajob.kotlinplayground.PrivacyView>
 
 </android.support.constraint.ConstraintLayout>
